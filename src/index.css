@@ -135,7 +135,7 @@ footer a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3.2rem;
-  color: #eee;
+  color: #ededed;
 }
 .articles div {
   padding: 1.2rem;
