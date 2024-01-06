@@ -33,6 +33,10 @@ h2 {
   padding-bottom: 3.2rem;
 }
 
+h3 {
+  font-size: 1.8rem;
+}
+
 .container {
   margin: 0 auto;
   max-width: 120rem;
@@ -124,4 +128,25 @@ footer a {
   margin-top: 0.6rem;
   font-weight: 700;
   opacity: 0.2;
+}
+
+.articles {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.2rem;
+  color: #eee;
+}
+.articles div {
+  padding: 1.2rem;
+  border-radius: 15px;
+}
+.articles p {
+  margin-bottom: 1.2rem;
+}
+.articles a {
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #ce1141;
 }

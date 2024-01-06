@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import players from "./playersData.js";
+import News from "./articles.js";
 
 function App() {
   return (
     <>
+      <News />
       <section className="section-article">
         <Header />
         <Article />
@@ -14,6 +16,10 @@ function App() {
     </>
   );
 }
+
+// ////////////////////////////////////////////////////
+
+// ///////////////////////////////////////////////////////
 
 function Header() {
   return <h1>NBA Players Stats</h1>;
@@ -29,7 +35,7 @@ function Article() {
           <Players playerObj={player} key={player.name} />
         ))}
       </div>
-      <TopStats />
+      <TopStats players={players} />
     </div>
   );
 }
@@ -54,22 +60,19 @@ function Players({ playerObj }) {
 function TopStats() {
   const topPPG = players.map((player) => player.ppg).sort((a, b) => b - a)[0];
   function getBestPlayerPPG(top) {
-    const comp = players.find((player) => player.ppg === top);
-    return comp;
+    return players.find((player) => player.ppg === top);
   }
   const bestPlayerPPG = getBestPlayerPPG(topPPG);
 
   const topRPG = players.map((player) => player.rpg).sort((a, b) => b - a)[0];
   function getBestPlayerRPG(top) {
-    const comp = players.find((player) => player.rpg === top);
-    return comp;
+    return players.find((player) => player.rpg === top);
   }
   const bestPlayerRPG = getBestPlayerRPG(topRPG);
 
   const topAPG = players.map((player) => player.apg).sort((a, b) => b - a)[0];
   function getBestPlayerAPG(top) {
-    const comp = players.find((player) => player.apg === top);
-    return comp;
+    return players.find((player) => player.apg === top);
   }
   const bestPlayerAPG = getBestPlayerAPG(topAPG);
 
@@ -96,6 +99,56 @@ function TopStats() {
     </div>
   );
 }
+
+// function TopStats({ players }) {
+//   const [topPPG, setTopPPG] = useState(0);
+//   const [bestPlayerPPG, setBestPlayerPPG] = useState(null);
+
+//   const [topRPG, setTopRPG] = useState(0);
+//   const [bestPlayerRPG, setBestPlayerRPG] = useState(null);
+
+//   const [topAPG, setTopAPG] = useState(0);
+//   const [bestPlayerAPG, setBestPlayerAPG] = useState(null);
+
+//   useEffect(() => {
+//     if (players.length > 0) {
+//       const sortedByPPG = players.slice().sort((a, b) => b.ppg - a.ppg);
+//       setTopPPG(sortedByPPG[0].ppg);
+//       setBestPlayerPPG(sortedByPPG[0]);
+
+//       const sortedByRPG = players.slice().sort((a, b) => b.rpg - a.rpg);
+//       setTopRPG(sortedByRPG[0].rpg);
+//       setBestPlayerRPG(sortedByRPG[0]);
+
+//       const sortedByAPG = players.slice().sort((a, b) => b.apg - a.apg);
+//       setTopAPG(sortedByAPG[0].apg);
+//       setBestPlayerAPG(sortedByAPG[0]);
+//     }
+//   }, [players]);
+
+//   return (
+//     <div className="top-stats-box">
+//       <p>
+//         Most PPG:{" "}
+//         <span>
+//           {topPPG} - {bestPlayerPPG && bestPlayerPPG.name}
+//         </span>
+//       </p>
+//       <p>
+//         Most RPG:{" "}
+//         <span>
+//           {topRPG} - {bestPlayerRPG && bestPlayerRPG.name}
+//         </span>
+//       </p>
+//       <p>
+//         Most APG:{" "}
+//         <span>
+//           {topAPG} - {bestPlayerAPG && bestPlayerAPG.name}
+//         </span>
+//       </p>
+//     </div>
+//   );
+// }
 
 function Footer() {
   return (
