@@ -22,7 +22,6 @@ function App() {
 const News = () => {
   const [articlesData, setArticlesData] = useState([]);
   const [selectedArticleIndex, setSelectedArticleIndex] = useState(0);
-  const [button, setButton] = useState(1);
   useEffect(() => {
     const fetchData = async () => {
       try {
