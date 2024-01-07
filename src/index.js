@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./queries.css";
 import players from "./playersData.js";
 import nbaArticles from "./api.js";
 
@@ -43,6 +44,7 @@ const News = () => {
     <div className="articles">
       <div className="article-btn-box">
         <h3>News:</h3>
+
         {articlesData.map((_, i) => (
           <button
             className={
@@ -89,12 +91,12 @@ function Article() {
   return (
     <div className="container">
       <h2>Chicago Bulls</h2>
+      <TopStats players={players} />
       <div className="players-boxes">
         {playersData.map((player) => (
           <Players playerObj={player} key={player.name} />
         ))}
       </div>
-      <TopStats players={players} />
     </div>
   );
 }
