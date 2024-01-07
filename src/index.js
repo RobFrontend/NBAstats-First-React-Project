@@ -22,6 +22,7 @@ function App() {
 const News = () => {
   const [articlesData, setArticlesData] = useState([]);
   const [selectedArticleIndex, setSelectedArticleIndex] = useState(0);
+  const [button, setButton] = useState(1);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -45,7 +46,11 @@ const News = () => {
         <h3>News:</h3>
         {articlesData.map((_, i) => (
           <button
-            className="article-btns"
+            className={
+              i === selectedArticleIndex
+                ? "article-btns active"
+                : "article-btns"
+            }
             key={i}
             onClick={() => handleSelectArticle(i)}
           >

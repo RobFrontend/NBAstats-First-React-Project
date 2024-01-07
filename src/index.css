@@ -195,8 +195,8 @@ footer a {
 .article-btns:hover {
   transform: translateY(-0.6rem);
 }
-.article-btns:focus,
-.article-btns:active {
+
+.active {
   background-color: #ce1141;
   color: #eee;
 }
