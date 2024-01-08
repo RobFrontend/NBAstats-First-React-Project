@@ -1,0 +1,68 @@
+const players = [
+  {
+    name: "DeMar DeRozan",
+    ppg: 22.4,
+    rpg: 3.8,
+    apg: 5.3,
+    photoName: "players/chicago-demar.webp",
+    position: "guard-forward",
+  },
+  {
+    name: "Zach LaVine",
+    ppg: 21,
+    rpg: 4.9,
+    apg: 3.4,
+    photoName: "players/chicago-lavine.webp",
+    position: "guard",
+  },
+  {
+    name: "Coby White",
+    ppg: 17.8,
+    rpg: 4.3,
+    apg: 4.8,
+    photoName: "players/chicago-white.webp",
+    position: "guard",
+  },
+  {
+    name: "Nikola Vucevic",
+    ppg: 16.7,
+    rpg: 10.4,
+    apg: 3.4,
+    photoName: "players/chicago-vucevic.webp",
+    position: "center",
+  },
+  {
+    name: "Patrick Williams",
+    ppg: 10,
+    rpg: 4,
+    apg: 1.5,
+    photoName: "players/chicago-williams.webp",
+    position: "forward",
+  },
+  {
+    name: "Alex Caruso",
+    ppg: 10,
+    rpg: 3.5,
+    apg: 2.5,
+    photoName: "players/chicago-caruso.webp",
+    position: "guard",
+  },
+  {
+    name: "Ayo Dosunmu",
+    ppg: 8,
+    rpg: 2.5,
+    apg: 1.9,
+    photoName: "players/chicago-dosunmu.webp",
+    position: "guard",
+  },
+  {
+    name: "Andre Drummond",
+    ppg: 7.3,
+    rpg: 8.6,
+    apg: 0.6,
+    photoName: "players/chicago-drummond.webp",
+    position: "center",
+  },
+];
+
+export default players;
